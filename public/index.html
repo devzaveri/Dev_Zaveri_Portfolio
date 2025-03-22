@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#0a192f" />
+    <meta name="description" content="Dev Zaveri - React Native Developer Portfolio | Creating exceptional mobile experiences with React Native" />
+    <meta name="keywords" content="Dev Zaveri, React Native, Mobile Developer, Portfolio, React, Redux, JavaScript" />
+    <meta name="author" content="Dev Zaveri" />
+    <meta property="og:title" content="Dev Zaveri - React Native Developer" />
+    <meta property="og:description" content="Creating exceptional mobile experiences with React Native" />
+    <meta property="og:type" content="website" />
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Custom Styles -->
+    <style>
+      ::selection {
+        background-color: rgba(100, 255, 218, 0.3);
+        color: #64ffda;
+      }
+      
+      ::-webkit-scrollbar {
+        width: 12px;
+      }
+      
+      ::-webkit-scrollbar-track {
+        background: #0a192f;
+      }
+      
+      ::-webkit-scrollbar-thumb {
+        background-color: #495670;
+        border: 3px solid #0a192f;
+        border-radius: 10px;
+      }
+      
+      ::-webkit-scrollbar-thumb:hover {
+        background-color: #64ffda;
+      }
+
+      body {
+        margin: 0;
+        padding: 0;
+        background-color: #0a192f;
+        overflow-x: hidden;
+      }
+
+      .cursor-glow {
+        width: 20px;
+        height: 20px;
+        background: rgba(100, 255, 218, 0.3);
+        border-radius: 50%;
+        position: fixed;
+        pointer-events: none;
+        z-index: 9999;
+        transition: transform 0.2s ease;
+      }
+    </style>
+    <title>Dev Zaveri | React Native Developer</title>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+    <div class="cursor-glow"></div>
+    <script>
+      // Custom cursor effect
+      document.addEventListener('mousemove', (e) => {
+        const cursor = document.querySelector('.cursor-glow');
+        cursor.style.transform = `translate(${e.clientX - 10}px, ${e.clientY - 10}px) scale(1)`;
+      });
+
+      document.addEventListener('mousedown', () => {
+        const cursor = document.querySelector('.cursor-glow');
+        cursor.style.transform += ' scale(1.5)';
+      });
+
+      document.addEventListener('mouseup', () => {
+        const cursor = document.querySelector('.cursor-glow');
+        cursor.style.transform = cursor.style.transform.replace(' scale(1.5)', '');
+      });
+    </script>
+  </body>
+</html>
