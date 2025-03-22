@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Node modules
 node_modules/
 npm-debug.log*
@@ -31,3 +32,6 @@ jest/
 .DS_Store
 Thumbs.db
 *.swp
+=======
+node_modules
+>>>>>>> 5ebd88b (Project setup)
