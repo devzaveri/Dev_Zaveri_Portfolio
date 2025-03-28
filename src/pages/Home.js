@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, CssBaseline, Container, Avatar } from "@mui/material";
+import { Box, CssBaseline, Container, Avatar, IconButton } from "@mui/material";
 import { motion } from "framer-motion";
 import FloatingNav from "../components/FloatingNav";
 import About from "../sections/About";
@@ -10,6 +10,7 @@ import Education from "../sections/Education";
 import Blog from "../sections/Blog";
 import Contact from "../sections/Contact";
 import Projects from "./Projects";
+import { GitHub, LinkedIn } from "@mui/icons-material";
 
 const Home = () => {
   return (
@@ -154,6 +155,31 @@ const Home = () => {
               >
                 React Native Developer
               </motion.p>
+              <Box
+                sx={{
+                  display: "flex",
+                  justifyContent: "center",
+                  gap: "1.5rem",
+                  marginTop: "1.5rem",
+                }}
+              >
+                <IconButton
+                  component="a"
+                  href="https://www.linkedin.com/in/devzaveri"
+                  target="_blank"
+                  sx={{ color: "#0077b5", height: "48px" }}
+                >
+                  <LinkedIn />
+                </IconButton>
+                <IconButton
+                  component="a"
+                  href="https://github.com/devzaveri"
+                  target="_blank"
+                  sx={{ color: "#333", height: "48px" }}
+                >
+                  <GitHub />
+                </IconButton>
+              </Box>
             </Box>
           </motion.div>
         </Container>

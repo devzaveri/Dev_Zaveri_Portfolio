@@ -9,7 +9,14 @@ import {
   Dialog,
   useTheme,
 } from "@mui/material";
-import { GitHub, Launch, Close, OpenInNew, ChevronLeft, ChevronRight } from "@mui/icons-material";
+import {
+  GitHub,
+  Launch,
+  Close,
+  OpenInNew,
+  ChevronLeft,
+  ChevronRight,
+} from "@mui/icons-material";
 import { motion, AnimatePresence } from "framer-motion";
 import BlogPosts from "../components/BlogPosts";
 
@@ -32,8 +39,8 @@ const projects = [
       "i18n",
       "AI Integration",
     ],
-    github: 'https://github.com/lawhub',
-    demo: 'https://lawhub.com',
+    github: "https://github.com/lawhub",
+    demo: "https://lawhub.com",
   },
   {
     title: "Sonata",
@@ -53,8 +60,8 @@ const projects = [
       "AWS S3",
       "In-App Purchase",
     ],
-    github: 'https://github.com/sonata',
-    demo: 'https://sonata.com',
+    github: "https://github.com/sonata",
+    demo: "https://sonata.com",
   },
   {
     title: "Treamo",
@@ -74,8 +81,8 @@ const projects = [
       "Custom Hooks",
       "i18n",
     ],
-    github: 'https://github.com/treamo',
-    demo: 'https://treamo.com',
+    github: "https://github.com/treamo",
+    demo: "https://treamo.com",
   },
   {
     title: "WeCollect",
@@ -96,8 +103,8 @@ const projects = [
       "In-App Purchase",
       "i18n",
     ],
-    github: 'https://github.com/wecollect',
-    demo: 'https://wecollect.com',
+    github: "https://github.com/wecollect",
+    demo: "https://wecollect.com",
   },
 ];
 
@@ -208,7 +215,13 @@ const Projects = () => {
                       {project.images.map((image, imgIndex) => (
                         <Grid
                           item
-                          xs={project.images.length <= 2 ? 6 : project.images.length === 3 ? 4 : 6}
+                          xs={
+                            project.images.length <= 2
+                              ? 6
+                              : project.images.length === 3
+                              ? 4
+                              : 6
+                          }
                           key={imgIndex}
                           sx={{
                             aspectRatio: "4/3",
@@ -231,7 +244,9 @@ const Projects = () => {
                                 boxShadow: "0 4px 20px rgba(78, 205, 196, 0.2)",
                               },
                             }}
-                            onClick={() => handleProjectClick(project, imgIndex)}
+                            onClick={() =>
+                              handleProjectClick(project, imgIndex)
+                            }
                           />
                         </Grid>
                       ))}
@@ -310,7 +325,7 @@ const Projects = () => {
               exit={{ opacity: 0, scale: 0.9 }}
               transition={{ duration: 0.3 }}
             >
-              <Box 
+              <Box
                 sx={{ position: "relative" }}
                 tabIndex={0}
                 onKeyDown={handleKeyDown}
@@ -370,7 +385,9 @@ const Projects = () => {
                 <Box
                   component="img"
                   src={selectedProject.images[currentImageIndex]}
-                  alt={`${selectedProject.title} screenshot ${currentImageIndex + 1}`}
+                  alt={`${selectedProject.title} screenshot ${
+                    currentImageIndex + 1
+                  }`}
                   sx={{
                     width: "100%",
                     height: "auto",
@@ -438,20 +455,6 @@ const Projects = () => {
                   <Typography variant="h5" sx={{ color: "white", mb: 1 }}>
                     {selectedProject.title}
                   </Typography>
-                  <Box sx={{ display: "flex", gap: 1 }}>
-                    <IconButton
-                      onClick={() => window.open(selectedProject.github, "_blank")}
-                      sx={{ color: "white" }}
-                    >
-                      <GitHub />
-                    </IconButton>
-                    <IconButton
-                      onClick={() => window.open(selectedProject.demo, "_blank")}
-                      sx={{ color: "white" }}
-                    >
-                      <Launch />
-                    </IconButton>
-                  </Box>
                 </Box>
               </Box>
             </motion.div>
