@@ -19,7 +19,7 @@ const About = () => {
     {
       icon: <EmailIcon />,
       label: "Email",
-      value: "dev.zaveri@example.com",
+      value: "devsoni5880@gmail.com",
     },
     {
       icon: <LocationIcon />,
