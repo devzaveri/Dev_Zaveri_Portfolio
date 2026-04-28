@@ -1,22 +1,33 @@
 import React from "react";
-import { Box } from "@mui/material";
+import { Box, CssBaseline } from "@mui/material";
 import Navbar from "./components/Navbar";
-import Home from "./pages/Home";
-import Projects from "./pages/Projects";
+import Hero from "./sections/Hero";
+import Services from "./sections/Services";
+import About from "./sections/About";
+import Projects from "./sections/Projects";
+import Skills from "./sections/Skills";
+import Experience from "./sections/Experience";
+import Education from "./sections/Education";
+import Blog from "./sections/Blog";
 import Contact from "./sections/Contact";
+import Footer from "./sections/Footer";
 
 function App() {
   return (
-    <Box sx={{ bgcolor: "background.default", minHeight: "100vh" }}>
-      {/* <Navbar /> */}
+    <Box sx={{ bgcolor: "#0a0a0a", minHeight: "100vh" }}>
+      <CssBaseline />
+      <Navbar />
       <Box component="main">
-        <section id="home">
-          <Home />
-        </section>
-
-        <section id="contact">
-          <Contact />
-        </section>
+        <Hero />
+        <Services />
+        <About />
+        <Projects />
+        <Skills />
+        <Experience />
+        <Education />
+        <Blog />
+        <Contact />
+        <Footer />
       </Box>
     </Box>
   );
