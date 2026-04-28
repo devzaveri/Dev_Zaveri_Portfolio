@@ -18,15 +18,9 @@ import {
   GitHub,
   Launch,
   Close,
-  OpenInNew,
   ChevronLeft,
   ChevronRight,
-  Business,
-  Schedule,
-  People,
   TrendingUp,
-  Code,
-  Smartphone,
   CheckCircle,
 } from "@mui/icons-material";
 import { motion, AnimatePresence } from "framer-motion";
@@ -407,14 +401,12 @@ const Projects = () => {
   const [selectedProject, setSelectedProject] = useState(null);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [selectedCategory, setSelectedCategory] = useState("All");
-  const theme = useTheme();
 
   const filteredProjects =
     selectedCategory === "All"
       ? projects
       : projects.filter((project) => project.category === selectedCategory);
 
-  const featuredProjects = projects.filter((project) => project.featured);
   const displayProjects =
     selectedCategory === "All" ? projects : filteredProjects;
 

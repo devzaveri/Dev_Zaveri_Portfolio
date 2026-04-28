@@ -17,7 +17,6 @@ import {
   Twitter,
   Download,
   ArrowRight,
-  CheckCircle,
   Star,
 } from "@mui/icons-material";
 

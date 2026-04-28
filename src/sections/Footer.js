@@ -12,7 +12,6 @@ import {
   LinkedIn,
   Twitter,
   Email,
-  Phone,
   LocationOn,
   KeyboardArrowUp,
 } from "@mui/icons-material";

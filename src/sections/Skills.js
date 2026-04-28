@@ -4,10 +4,7 @@ import { motion } from "framer-motion";
 import {
   Code as CodeIcon,
   PhoneAndroid as MobileIcon,
-  Storage as StateIcon,
   Api as ApiIcon,
-  JavaScript as JsIcon,
-  Web as WebIcon,
 } from "@mui/icons-material";
 
 const Skills = () => {
