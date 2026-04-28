@@ -6,7 +6,6 @@ import {
   Grid,
   Button,
   Card,
-  CardContent,
   Avatar,
 } from "@mui/material";
 import { motion } from "framer-motion";

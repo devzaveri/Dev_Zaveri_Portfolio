@@ -8,7 +8,6 @@ import {
   Alert,
   Grid,
   Card,
-  CardContent,
   IconButton,
 } from "@mui/material";
 import { motion } from "framer-motion";
@@ -18,7 +17,7 @@ import {
   Person as PersonIcon,
   Message as MessageIcon,
   Phone as PhoneIcon,
-  LocationOn as LocationOn,
+  LocationOn,
   AccessTime,
   LinkedIn as LinkedInIcon,
   GitHub as GitHubIcon,
