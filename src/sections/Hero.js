@@ -250,7 +250,7 @@ const Hero = () => {
                 <Box sx={{ display: "flex", gap: 2, mb: 4 }}>
                   <IconButton
                     component="a"
-                    href="https://www.linkedin.com/in/devzaveri"
+                    href="https://www.linkedin.com/in/dev-zaveri-211635201/"
                     target="_blank"
                     sx={{
                       color: "#0077b5",
